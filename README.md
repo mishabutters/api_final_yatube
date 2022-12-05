@@ -1,5 +1,5 @@
 
-# Описание.
+# Описание
 Проект управления записями в БД через API.
 
 Позволяет работать с моделями:
@@ -8,12 +8,15 @@ Comment - комментарии
 Group - группы пользователей
 Follow - подписчики
 
+# Технологии
+Python 3.7, Django 3.2, DRF, JWT + Djoser
+
 # Расширенная документация по API доступен после установки:
 
 Документация к API проекта Yatube (v1)
 ./redoc/
 
-# Установка.
+# Установка
 
 Клонировать репозиторий и перейти в него в командной строке:
 
@@ -33,25 +36,3 @@ python manage.py migrate
 
 Запустить проект:
 python manage.py runserver
-
-# Примеры.
-Получение публикаций
-Получить список всех публикаций. При указании параметров limit и offset выдача работает с пагинацией:
-Запрос:
-./api/v1/posts/
-Ответ:
-{
-  "count": 123,
-  "next": "http://api.example.org/accounts/?offset=400&limit=100",
-  "previous": "http://api.example.org/accounts/?offset=200&limit=100",
-  "results": [
-    {
-      "id": 0,
-      "author": "string",
-      "text": "string",
-      "pub_date": "2021-10-14T20:41:29.648Z",
-      "image": "string",
-      "group": 0
-    }
-  ]
-}
